@@ -38,10 +38,18 @@ export default defineConfig({
     // Code splitting optimization
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'mui-vendor': ['@mui/material', '@mui/x-charts', '@emotion/react', '@emotion/styled'],
-          'chart-vendor': ['react-circular-progressbar']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('@mui') || id.includes('@emotion')) {
+              return 'mui-vendor';
+            }
+            if (id.includes('react-circular-progressbar')) {
+              return 'chart-vendor';
+            }
+          }
         },
         // Shorter file names
         chunkFileNames: 'js/[name]-[hash:8].js',
