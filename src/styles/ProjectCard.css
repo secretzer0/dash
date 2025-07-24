@@ -1,0 +1,297 @@
+.project-card {
+  width: 100%;
+  max-width: 1206px;
+  height: 100%;
+  min-height: 490px;
+  position: relative;
+  flex: 1;
+  overflow: visible; /* Changed from hidden to visible */
+  min-width: 1122px; /* 3 cards (366px) + 2 gaps (12px) = 1122px */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project-card-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 20px;
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 19.41%, rgba(10, 14, 35, 0.49) 76.65%);
+  backdrop-filter: blur(60px);
+}
+
+.project-header {
+  width: 167px;
+  height: 52px;
+  position: absolute;
+  left: 24px;
+  top: 28px;
+}
+
+.project-title {
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  width: 74px;
+  height: 25px;
+  margin-bottom: 6px;
+}
+
+.project-subtitle {
+  color: #A0AEC0;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 167px;
+  height: 21px;
+}
+
+.project-cards-container {
+  width: calc(100% - 48px);
+  height: 360px;
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 94px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* When project-card is full width and cards need to wrap */
+@media (max-width: 1600px) {
+  .project-card {
+    min-width: 0;
+    overflow: visible;
+    height: auto !important;
+    min-height: 490px;
+    padding-bottom: 20px;
+  }
+  
+  /* Allow wrapping when there's not enough space for all 3 cards */
+  .project-cards-container {
+    position: relative !important;
+    top: auto !important;
+    flex-wrap: wrap;
+    height: auto !important;
+    overflow-x: visible;
+    overflow-y: visible;
+    justify-content: flex-start;
+    margin-top: 94px; /* Use margin instead of absolute positioning */
+  }
+  
+  .project-header {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 1200px) {
+  .project-cards-container {
+    flex-wrap: wrap;
+    height: auto !important;
+    overflow-x: visible;
+  }
+  
+  .project-card {
+    height: auto !important;
+    min-height: 485px;
+    padding-bottom: 20px; /* Add padding when cards actually wrap */
+  }
+}
+
+/* Stack vertically on tablets */
+@media (max-width: 768px) {
+  .project-card {
+    height: auto !important;
+    min-height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-header {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .project-cards-container {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+    min-height: auto;
+    padding: 0 24px 20px 24px;
+  }
+}
+
+/* Mobile adjustments - cards stay fixed size but container adjusts */
+@media (max-width: 480px) {
+  .project-card {
+    height: auto !important;
+    min-height: auto;
+    padding: 16px 0 40px 0;
+  }
+  
+  .project-cards-container {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    gap: 12px;
+    padding: 0 16px 20px 16px;
+    align-items: center;
+    height: auto;
+    min-height: auto;
+  }
+}
+
+.project-card-item {
+  width: 366px;
+  height: 360px;
+  position: relative;
+  flex-shrink: 0;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.card-image-container {
+  width: 366px;
+  height: 192px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.card-image-background {
+  width: 366px;
+  height: 192px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0 3.5px 5.5px 0 rgba(0, 0, 0, 0.02);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-content {
+  width: 323px;
+  height: 150px;
+  position: absolute;
+  left: 9px;
+  top: 202px;
+}
+
+.card-subtitle {
+  color: #A0AEC0;
+  font-family: 'Plus Jakarta Display', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 50px;
+  height: 15px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  height: 25px;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: #A0AEC0;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  height: 42px;
+  margin-bottom: 17px;
+}
+
+.view-all-button {
+  display: flex;
+  width: 111px;
+  height: 35px;
+  padding: 0 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #FFF;
+  background: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.avatar-group {
+  width: 59px;
+  height: 23px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-left: -8px;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-bg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4318FF;
+  border: 2px solid #121241;
+}
+
+

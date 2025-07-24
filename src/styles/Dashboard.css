@@ -1,0 +1,85 @@
+:root {
+  --Gray-Gray-400: #A0AEC0;
+  --black-amp-white-white: #FFF;
+  --Secondary-Dark-Grey-500: #8F9BBA;
+  --Secondary-Primary-White: #FFF;
+  --Gray-Gray-500: #718096;
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-bottom-section {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex: 1;
+  min-height: 490px;
+}
+
+/* Allow dashboard-bottom-section to expand on mobile */
+@media (max-width: 768px) {
+  .dashboard-bottom-section {
+    min-height: auto;
+    flex-direction: column;
+  }
+}
+
+/* When project-card doesn't have enough space, it slides above platform-settings */
+/* Platform settings: 368px + gap: 24px + 3 cards (370px each) + 2 gaps (16px each) = 1534px minimum */
+/* Add some padding for container margins = ~1600px total */
+@media (max-width: 1600px) {
+  .dashboard-bottom-section {
+    flex-wrap: wrap;
+  }
+  
+  .platform-settings {
+    flex-shrink: 0;
+    width: 368px;
+    order: 2; /* Move platform-settings to second position */
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    order: 1; /* Move project-card to first position */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .platform-settings {
+    width: 100%;
+    max-width: 368px;
+  }
+}

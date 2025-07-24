@@ -1,0 +1,171 @@
+.breadcrumb {
+  width: 100%;
+  max-width: 1598px;
+  height: 53px;
+  position: relative;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumb-left {
+  width: 140px;
+  height: 38px;
+  position: relative;
+}
+
+.breadcrumb-navigation {
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  width: 113px;
+  height: 12px;
+  font-family: 'Plus Jakarta Display', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.pages-text {
+  color: #A0AEC0;
+}
+
+.profile-text {
+  color: #FFF;
+}
+
+.profile-label {
+  color: #FFF;
+  font-family: 'Plus Jakarta Display', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  position: absolute;
+  left: 0px;
+  top: 18px;
+  width: 43px;
+  height: 20px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 116px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.breadcrumb-menu {
+  width: 335px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-container {
+  display: flex;
+  width: 199px;
+  height: 40px;
+  align-items: center;
+  border-radius: 15px;
+  border: 0.5px solid rgba(226, 232, 240, 0.30);
+  background: #0F1535;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.search-addon {
+  display: flex;
+  width: 37.5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.search-placeholder {
+  color: #A0AEC0;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  flex: 1;
+}
+
+.sign-in-item {
+  display: inline-flex;
+  height: 16px;
+  align-items: center;
+  gap: 4px;
+}
+
+.person-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.sign-in-text {
+  color: #718096;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.settings-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.notifications-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    padding: 16px;
+  }
+  
+  .breadcrumb-menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .search-container {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .sign-in-item {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-container {
+    order: 1;
+  }
+}

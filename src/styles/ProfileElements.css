@@ -1,0 +1,332 @@
+.profile-elements {
+  width: 100%;
+  max-width: 1598px;
+  height: 129px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.profile-elements-background {
+  width: 100%;
+  height: 129px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.background-gradient-1 {
+  width: 100%;
+  height: 129px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 20px;
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 19.41%, rgba(10, 14, 35, 0.49) 76.65%);
+  backdrop-filter: blur(60px);
+}
+
+.background-gradient-2 {
+  width: 100%;
+  height: 129px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 20px;
+  background: linear-gradient(113deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.62) 110.84%);
+  box-shadow: 0 2px 5.5px 0 rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10.499999046325684px);
+}
+
+.profile-tabs {
+  height: 35px;
+  position: absolute;
+  right: 52px;
+  top: 48px;
+  display: flex;
+  gap: 0px;
+}
+
+.tab-button {
+  display: flex;
+  width: 135px;
+  height: 35px;
+  padding: 0 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.tab-button.active {
+  background: #0075FF;
+  backdrop-filter: blur(60px);
+}
+
+.tab-icon {
+  width: 11px;
+  height: 11px;
+}
+
+.tab-text {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.profile-avatar {
+  width: 252px;
+  height: 85px;
+  position: absolute;
+  left: 23px;
+  top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.avatar-container {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.avatar-background {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #C4C4C4;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+}
+
+.edit-icon {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 59px;
+  top: 59px;
+}
+
+.edit-icon-background {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(139deg, rgba(6, 11, 40, 0.94) 17.44%, rgba(10, 14, 35, 0.49) 93.55%, rgba(10, 14, 35, 0.69) 93.55%);
+  backdrop-filter: blur(60px);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.edit-svg {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+
+.profile-name {
+  width: 150px;
+  height: 47px;
+}
+
+.name-title {
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  width: 128px;
+  height: 25px;
+  margin-bottom: 1px;
+}
+
+.name-email {
+  color: #A0AEC0;
+  font-family: 'Plus Jakarta Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 150px;
+  height: 21px;
+}
+
+/* Medium screens - adjust layout */
+@media (max-width: 1200px) {
+  .profile-tabs {
+    right: 20px;
+  }
+  
+  .tab-button {
+    width: 120px;
+    font-size: 9px;
+  }
+}
+
+/* Tablets - stack elements */
+@media (max-width: 768px) {
+  .profile-elements {
+    height: auto;
+    min-height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .profile-elements-background,
+  .background-gradient-1,
+  .background-gradient-2 {
+    height: 100%;
+  }
+  
+  .profile-avatar {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .avatar-container {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  
+  .avatar-background,
+  .avatar-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .edit-icon {
+    width: 20px;
+    height: 20px;
+    left: 44px;
+    top: 44px;
+  }
+  
+  .edit-icon-background {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .edit-svg {
+    width: 10px;
+    height: 10px;
+    left: 5px;
+    top: 5px;
+  }
+  
+  .profile-name {
+    width: auto;
+    height: auto;
+    text-align: left;
+  }
+  
+  .name-title {
+    width: auto;
+    font-size: 16px;
+    height: auto;
+    word-wrap: break-word;
+  }
+  
+  .name-email {
+    width: auto;
+    font-size: 13px;
+    height: auto;
+    word-wrap: break-word;
+  }
+  
+  .profile-tabs {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab-button {
+    width: auto;
+    min-width: 110px;
+    padding: 0 12px;
+    height: 32px;
+  }
+  
+  .tab-text {
+    font-size: 9px;
+  }
+}
+
+/* Mobile - vertical layout */
+@media (max-width: 480px) {
+  .profile-elements {
+    padding: 16px;
+  }
+  
+  .profile-avatar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .profile-name {
+    text-align: center;
+  }
+  
+  .name-title {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .name-email {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .profile-tabs {
+    gap: 6px;
+  }
+  
+  .tab-button {
+    min-width: 90px;
+    height: 30px;
+    padding: 0 8px;
+  }
+  
+  .tab-text {
+    font-size: 8px;
+  }
+  
+  .tab-icon {
+    width: 9px;
+    height: 9px;
+  }
+}
