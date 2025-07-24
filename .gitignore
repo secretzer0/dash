@@ -11,6 +11,9 @@ node_modules
 dist-ssr
 *.local
 
+# Config directories with secrets
+.config/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
